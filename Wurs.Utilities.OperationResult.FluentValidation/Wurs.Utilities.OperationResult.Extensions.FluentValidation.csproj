@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PackageId>Wurs.Utilities.OperationResult.Extensions.FluentValidation</PackageId>
+	<Version>$(VersionPrefix)</Version>
+	<Authors>WÜRS TECH</Authors>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wurs.Utilities.OperationResult\Wurs.Utilities.OperationResult.csproj" />
+  </ItemGroup>
+
+</Project>

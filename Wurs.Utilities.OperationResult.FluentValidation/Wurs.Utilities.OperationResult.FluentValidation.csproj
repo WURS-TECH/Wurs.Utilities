@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<PackageId>Wurs.Utilities.OperationResult.Extensions.FluentValidation</PackageId>
+	<PackageId>Wurs.Utilities.OperationResult.FluentValidation</PackageId>
 	<Version>$(VersionPrefix)</Version>
 	<Authors>WÜRS TECH</Authors>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

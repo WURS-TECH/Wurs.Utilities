@@ -1,11 +1,11 @@
 ﻿using FluentValidation.Results;
 
-namespace Wurs.Utilities.OperationResult.Extensions.FluentValidation;
+namespace Wurs.Utilities.OperationResult.FluentValidation;
 
 /// <summary>
 /// Contains util extensions to use <see cref="OperationResult{T}"/> in conjuction with FluentValidation library.
 /// </summary>
-public static class OperationResultExtensions
+public static class OperationResultFluentValidation
 {
     /// <summary>
     /// Extension method to map <see cref="List{ValidationFailure}"/> to <see cref="List{Error}"/>

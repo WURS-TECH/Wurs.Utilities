@@ -39,7 +39,7 @@ public class OperationResult<T> where T : class
     /// <summary>
     /// Adds the result to the end of <see cref="Results"/> and overrides the current <see cref="Result"/>
     /// </summary>
-    /// <param name="result">The new result to add</param>
+    /// <param name="result">The result to add</param>
     /// <exception cref="ArgumentNullException">If <paramref name="result"/>is null or empty</exception>
     /// <returns>Current instance of <see cref="OperationResult{T}"/> so additional calls can be chained</returns>
     public OperationResult<T> AddResult(T result)
@@ -54,7 +54,8 @@ public class OperationResult<T> where T : class
     }
 
     /// <summary>
-    /// Adds a list of <see cref="Result"/> to the end of <see cref="Results"/>
+    /// Adds the <paramref name="results"/> to the end of <see cref="Results"/>
+    /// and overrides the current <see cref="Result"/> with the last entry of <paramref name="results"/>
     /// </summary>
     /// <param name="results">The list of results to add</param>
     /// <exception cref="ArgumentNullException">If <paramref name="results"/>is null</exception>
@@ -71,24 +72,23 @@ public class OperationResult<T> where T : class
     }
 
     /// <summary>
-    /// Adds a new error with message to <see cref="Errors"/> 
+    /// Adds an error to <see cref="Errors"/> 
     /// and overrides the current <see cref="Error"/>
     /// </summary>
-    /// <param name="message">The error message</param>
+    /// <param name="error">The error to add</param>
+    /// <exception cref="ArgumentNullException">If <paramref name="error"/>is null</exception>
     /// <returns>Current instance of <see cref="OperationResult{T}"/> so additional calls can be chained</returns>
-    public OperationResult<T> AddError(string message) => AddError(new Error(message));
+    public OperationResult<T> AddError(Error error)
+    {
+        ArgumentNullException.ThrowIfNull(error, nameof(error));
+        Errors.Add(error);
+        Error = error;
+        return this;
+    }
 
     /// <summary>
-    /// Adds a new error with message and code to <see cref="Errors"/> 
-    /// and overrides the current <see cref="Error"/>
-    /// </summary>
-    /// <param name="message">The error message</param>
-    /// <param name="code">The error code</param>
-    /// <returns>Current instance of <see cref="OperationResult{T}"/> so additional calls can be chained</returns>
-    public OperationResult<T> AddError(string message, int code) => AddError(new Error(message, code));
-
-    /// <summary>
-    /// Adds a list of <see cref="Error"/> to the end of <see cref="Errors"/>
+    /// Adds the <paramref name="errors"/> to the end of <see cref="Errors"/>
+    /// and overrides the current <see cref="Error"/> with the last entry of <paramref name="errors"/>
     /// </summary>
     /// <param name="errors">The list of errors to add</param>
     /// <exception cref="ArgumentNullException">If <paramref name="errors"/>is null</exception>
@@ -123,13 +123,6 @@ public class OperationResult<T> where T : class
     {
         Results.Clear();
         Result = default;
-        return this;
-    }
-
-    private OperationResult<T> AddError(Error error)
-    {
-        Errors.Add(error);
-        Error = error;
         return this;
     }
 }

@@ -35,7 +35,7 @@ The OperationResult pattern is a way to encapsulate the result of an operation, 
 
 You can install both libraries via NuGet Package Manager:
 
-```bash
+```c#
 # Wurs.Utilities.OperationResult
 Install-Package Wurs.Utilities.OperationResult
 
@@ -44,7 +44,7 @@ Install-Package Wurs.Utilities.OperationResult.Extensions.FluentValidation
 ```
 #### Basic Usage
 Here's a simple example of using the Wurs.Utilities.OperationResult library:
-```bash
+```c#
 using Wurs.Utilities.OperationResult;
 
 // ...
@@ -63,7 +63,7 @@ public OperationResult<int> Divide(int dividend, int divisor)
 ### Fluent Validation Integration
 `Wurs.Utilities.OperationResult.Extensions.FluentValidation` allows you to easily integrate FluentValidation with the OperationResult pattern. Here's an example:
 
-```bash
+```c#
 using Wurs.Utilities.OperationResult.Extensions.FluentValidation;
 using FluentValidation;
 // ...

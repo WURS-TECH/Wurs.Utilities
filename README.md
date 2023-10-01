@@ -1,11 +1,6 @@
 # Wurs.Utilities
 A set of code utilities for your .NET projects, you can read more about on the readme file inside the folder of each package.
 
-## Table of Contents
-- [Getting Started](#getting-started)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
-
 ### Getting Started
 Details of the installation and the libraries found in this repository can be found in the specific readmes for each library.
 

@@ -9,6 +9,9 @@ A set of code utilities for your .NET projects, you can read more about on the r
 ### Getting Started
 Details of the installation and the libraries found in this repository can be found in the specific readmes for each library.
 
+- [Wurs.Utilities.OperationResult](https://github.com/WURS-TECH/Wurs.Utilities/tree/master/Wurs.Utilities.OperationResult#readme)
+- [Wurs.Utilities.OperationResult.Extensions.FluentValidation](https://github.com/WURS-TECH/Wurs.Utilities/tree/master/Wurs.Utilities.OperationResult.FluentValidation#readme)
+
 ### Acknowledgments
 The acknowledgements section is defined in the specific readme of each package.
 

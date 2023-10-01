@@ -47,7 +47,7 @@ public OperationResult<int> Divide(int dividend, int divisor)
     
     if (divisor == 0)
     {
-        return result.AddError("Division by zero is not allowed.");
+        return result.AddError(new Error("Division by zero is not allowed."));
     }
 
     return result.AddResult(dividend / divisor);

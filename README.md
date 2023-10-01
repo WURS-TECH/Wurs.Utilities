@@ -69,7 +69,7 @@ using FluentValidation;
 // ...
 private readonly IValidator<MyModel> _myModelValidator;
 
-public MyModelService(IValidator<CreateTokenRequest> myModelValidator)
+public MyModelService(IValidator<MyModel> myModelValidator)
 {
     _myModelValidator = myModelValidator;
 }

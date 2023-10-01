@@ -40,13 +40,14 @@ public class OperationResult<T> where T : class
     /// Adds the result to the end of <see cref="Results"/> and overrides the current <see cref="Result"/>
     /// </summary>
     /// <param name="result">The result to add</param>
-    /// <exception cref="ArgumentNullException">If <paramref name="result"/>is null or empty</exception>
+    /// <exception cref="ArgumentNullException">If <paramref name="result"/>is null</exception>
+    /// <exception cref="ArgumentException">If <paramref name="result"/>is empty string</exception>
     /// <returns>Current instance of <see cref="OperationResult{T}"/> so additional calls can be chained</returns>
     public OperationResult<T> AddResult(T result)
     {
         ArgumentNullException.ThrowIfNull(result, nameof(result));
         if (result.GetType() == typeof(string))
-            ArgumentException.ThrowIfNullOrEmpty(nameof(result));
+            ArgumentException.ThrowIfNullOrEmpty(result as string, nameof(result));
 
         Results.Add(result);
         Result = result;

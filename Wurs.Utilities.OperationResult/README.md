@@ -15,7 +15,7 @@
 
 The OperationResult pattern is a way to encapsulate the result of an operation, including success or failure information, error messages, and additional data. It helps in creating cleaner and more maintainable code by separating concerns related to error handling from the core business logic.
 
-`Wurs.Utilities.OperationResult` provides the foundation for implementing this pattern in your .NET applications. The extension library, `Wurs.Utilities.OperationResult.Extensions.FluentValidation`, enhances this pattern's usability by integrating it with [Fluent Validation](https://github.com/FluentValidation/FluentValidation), a popular library for building strongly-typed validation rules.
+`Wurs.Utilities.OperationResult` provides the foundation for implementing this pattern in your .NET applications. The extension library, `Wurs.Utilities.OperationResult.FluentValidation`, enhances this pattern's usability by integrating it with [Fluent Validation](https://github.com/FluentValidation/FluentValidation), a popular library for building strongly-typed validation rules.
 
 ## Features
 

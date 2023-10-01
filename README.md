@@ -88,7 +88,7 @@ public OperationResult<MyModel> AssignPropertyOne(MyModel model)
     return result.AddResult(model);
 }
 ```
-## Acknowledgments
+### Acknowledgments
 
 This project relies on the following open-source libraries and their talented authors:
 

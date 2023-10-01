@@ -13,6 +13,7 @@ public static class OperationResultExtensions
     /// <typeparam name="T">Used type of <see cref="OperationResult{T}"/></typeparam>
     /// <param name="result">The <see cref="OperationResult{T}"/>where to add the mapped errors</param>
     /// <param name="failures">The list of fluent validation <see cref="ValidationFailure"/>/></param>
+    /// <exception cref="ArgumentNullException">If <paramref name="result"/> or <paramref name="failures"/> are null</exception>
     /// <returns>The current instance of <see cref="OperationResult{T}"/> so adittional calls can be chained</returns>
     public static OperationResult<T> AddErrors<T>(this OperationResult<T> result, IList<ValidationFailure> failures) where T : class
     {

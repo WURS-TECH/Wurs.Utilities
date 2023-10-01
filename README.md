@@ -77,7 +77,7 @@ public MyModelService(IValidator<CreateTokenRequest> myModelValidator)
 public OperationResult<MyModel> AssignPropertyOne(MyModel model)
 {
     var result = new OperationResult<MyModel>();
-    var validationResult = _myModelValidator.Validate(createTokenRequest);
+    var validationResult = _myModelValidator.Validate(model);
 
     if (!validationResult.IsValid)
         return result.AddErrors(validationResult.Errors);

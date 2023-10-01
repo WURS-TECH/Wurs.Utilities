@@ -44,11 +44,10 @@ public class OperationResult<T> where T : class
     /// <returns>Current instance of <see cref="OperationResult{T}"/> so additional calls can be chained</returns>
     public OperationResult<T> AddResult(T result)
     {
-        if (result is string)
-        {
-            ArgumentException.ThrowIfNullOrEmpty(nameof(result));
-        }
         ArgumentNullException.ThrowIfNull(result, nameof(result));
+        if (result.GetType() == typeof(string))
+            ArgumentException.ThrowIfNullOrEmpty(nameof(result));
+
         Results.Add(result);
         Result = result;
         return this;

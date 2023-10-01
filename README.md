@@ -3,7 +3,6 @@ A set of code utilities for your .NET projects, you can read more about on the r
 
 ## Table of Contents
 - [Getting Started](#getting-started)
-- [FluentValidation Integration](#fluentvalidation-integration)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 

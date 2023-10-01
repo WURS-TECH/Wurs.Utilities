@@ -2,7 +2,7 @@
 A set of code utilities for your .NET projects, you can read more about on the readme file inside the folder of each package.
 
 ### Getting Started
-Installation details and how to use the libraries in this repository can be found in the readme file inside the folder of each library.
+Installation details and how to use the libraries can be found in the readme file inside the folder of each library.
 
 - [Wurs.Utilities.OperationResult](https://github.com/WURS-TECH/Wurs.Utilities/tree/master/Wurs.Utilities.OperationResult#wursutilitiesoperationresult)
 - [Wurs.Utilities.OperationResult.FluentValidation](https://github.com/WURS-TECH/Wurs.Utilities/tree/master/Wurs.Utilities.OperationResult.FluentValidation#wursutilitiesoperationresultextensionsfluentvalidation)

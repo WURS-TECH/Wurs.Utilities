@@ -1,6 +1,6 @@
-# Wurs.Utilities.OperationResult.Extensions.FluentValidation
+# Wurs.Utilities.OperationResult.FluentValidation
 
-`Wurs.Utilities.OperationResult.Extensions.FluentValidation` is a .NET library that provides extension methods to use `Wurs.Utilities.OperationResult` with [Fluent Validation](https://github.com/FluentValidation/FluentValidation)
+`Wurs.Utilities.OperationResult.FluentValidation` is a .NET library that provides extension methods to use `Wurs.Utilities.OperationResult` with [Fluent Validation](https://github.com/FluentValidation/FluentValidation)
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`Wurs.Utilities.OperationResult.Extensions.FluentValidation`, enhances `Wurs.Utilities.OperationResult` usability by integrating it with [Fluent Validation](https://github.com/FluentValidation/FluentValidation), a popular library for building strongly-typed validation rules.
+`Wurs.Utilities.OperationResult.FluentValidation`, enhances `Wurs.Utilities.OperationResult` usability by integrating it with [Fluent Validation](https://github.com/FluentValidation/FluentValidation), a popular library for building strongly-typed validation rules.
 
 ## Features
 - **FluentValidation mapping:** Seamlessly validate objects using [Fluent Validation](https://github.com/FluentValidation/FluentValidation) and map the validation failures to OperationResult errors.
@@ -25,14 +25,14 @@
 You can install the library via NuGet Package Manager:
 
 ```c#
-# Wurs.Utilities.OperationResult.Extensions.FluentValidation
-Install-Package Wurs.Utilities.OperationResult.Extensions.FluentValidation
+# Wurs.Utilities.OperationResult.FluentValidation
+Install-Package Wurs.Utilities.OperationResult.FluentValidation
 ```
 ### Basic Usage
 In the following example, we use FluentValidation to validate our model and map the `List<ValidationFailures>` to `List<OperationResult<T>.Errors>` using the extension method `OperationResult<T>.AddErrors()`.
 
 ```c#
-using Wurs.Utilities.OperationResult.Extensions.FluentValidation;
+using Wurs.Utilities.OperationResult.FluentValidation;
 using FluentValidation;
 // ...
 private readonly IValidator<MyModel> _myModelValidator;

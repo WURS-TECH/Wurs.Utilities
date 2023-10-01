@@ -26,7 +26,7 @@ The OperationResult pattern is a way to encapsulate the result of an operation, 
 - **Operation Result Pattern:** Easily implement the Operation Result pattern in your .NET projects.
 - **Error Messages:** Include detailed error messages in your operation results.
 - **Error codes:** Attach custom error codes to your operation results.
-- **Fluent interface pattern:** All the implemented OperationResult<T> methods return the current instance, so you can chain additional calls and return your operation directly returning this methods.
+- **Fluent interface pattern:** All the implemented OperationResult<T> methods return the current operation instance, so you can chain additional calls or return directly this methods.
 - **FluentValidation Integration:** Seamlessly validate objects using FluentValidation and map the validation failures to OperationResult errors.
 
 ### Getting Started
@@ -69,15 +69,15 @@ using FluentValidation;
 // ...
 private readonly IValidator<MyModel> _myModelValidator;
 
-public MyModelService(IValidator<CreateTokenRequest> createTokenValidator)
+public MyModelService(IValidator<CreateTokenRequest> myModelValidator)
 {
-    _createTokenValidator = createTokenValidator;
+    _myModelValidator = myModelValidator;
 }
 
 public OperationResult<MyModel> AssignPropertyOne(MyModel model)
 {
     var result = new OperationResult<MyModel>();
-    var validationResult = _createTokenValidator.Validate(createTokenRequest);
+    var validationResult = _myModelValidator.Validate(createTokenRequest);
 
     if (!validationResult.IsValid)
         return result.AddErrors(validationResult.Errors);
